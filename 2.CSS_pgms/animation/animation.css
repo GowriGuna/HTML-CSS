@@ -1,0 +1,66 @@
+.parent{
+    width: 800px;
+    height: 400px;
+    background-color:rebeccapurple;
+}
+.child {
+    width: 50%;
+    height: 200px;
+    background-color: plum;
+}
+.childXyz{
+    width: 50%;
+    height: 200px;
+    background-color: plum;
+    transition: transform 3s;
+    /* transition-delay: 1s; */
+    transition-property: all;  
+}
+.parent:hover .xx{
+    transform: translateX(100%);
+    /* transform: translate3d(50%, 100%, 3em); */
+}
+.parent:hover .yy{
+    transform: translateY(100%);
+}
+.parent:hover .rot{
+    /* transform: translateZ(2.5); */
+    height: 100px;
+    width: 100px;
+    transform: rotate(360deg);
+    transition: transform 3s;
+}
+.parent:hover .child{
+    animation-name: myAnim;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes myAnim {
+    
+    0%{
+        transform: translate(0,0);
+    }
+    25%{
+        transform: translate(0,200px);
+        background-color: seashell;
+        
+    }
+    50%{
+        transform: translate(200px,200px);
+        background-color: slateblue;
+        border-radius: 50%;
+        /* height: 250px;
+        width: 250px; */
+    }
+    75%{
+        transform: translate(200px,0px);
+        background-color: springgreen;
+    }
+    100%{
+        transform: translate(0,0);
+        background-color: violet;
+        /* border-radius: 50%;
+        height: 250px;
+        width: 250px; */
+    }
+}
